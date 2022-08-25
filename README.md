@@ -10,3 +10,4 @@
 
 
 > Cada pasta possui um arquivo *MARKDOWN* com um **RESUMO** sobre o algoritmo correspondente.
+> Imagens usadas do Livro [ENTENDENDO ALGORITMOS - um guia ilustrado para programadores e outros curiosos](https://www.amazon.com.br/Entendendo-Algoritmos-Ilustrado-Programadores-Curiosos/dp/8575225634/ref=asc_df_8575225634/?tag=googleshopp00-20&linkCode=df0&hvadid=379765802639&hvpos=&hvnetw=g&hvrand=1940483533319984147&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100299&hvtargid=pla-811121403561&psc=1)
