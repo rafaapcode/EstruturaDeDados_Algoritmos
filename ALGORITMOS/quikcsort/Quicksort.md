@@ -10,3 +10,7 @@
 - Para melhorar o desempenho do nosso algoritmo é sempre bom escolher o pivô como um elemento do meio do array.
 
 ![figjam](./img/Figjam.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Dividir para Conquistar
