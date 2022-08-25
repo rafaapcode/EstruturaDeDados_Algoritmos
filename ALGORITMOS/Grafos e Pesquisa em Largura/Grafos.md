@@ -13,3 +13,43 @@
 ![Algoritmo](./Img/Algoritmo.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Grafos
+- São conjuntos de conexões, formados por Aresta e Vértices.
+- Um vértice pode ser conectados a vários outros vértices.
+- Os vizinho são aqueles vértices que estão diretamente conectados uns aos outros.
+
+![GrafosVérticesArestas](./Img/grafos2.png)
+![Grafos](./Img/Grafos.png)
+![GrafosFigjam](./Img/GrafosFigjam2.png)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Implementando Grafos em JavaScript
+- Implementação do Grafo abaixo em JavaScript.
+- Para fazer a implementações dos grafos usamos as tabelas hash.
+
+![GrafosImplementando](./Img/ImplementandoGrafos2.png)
+
+
+```
+const grafos = {};
+
+//  ["Claire", "Bob", "Penny", "Tico"] -> Vizinhos
+grafos.voce = ["Claire", "Bob", "Alice"];
+grafos.Bob = ["Peggy", "Anuj"];
+grafos.alice = ["Peggy"]
+grafos.claire = ["Thom", "Jonny"]
+grafos.peggy = [];
+grafos.anuj = [];
+grafos.thom = [];
+grafos.jonny = [];
+
+```
+
+
+### Grafos Direcionados e Não direcionados
+- Grafos direcionados são grafos que possuem somente um direção, somente um vizinho.
+- Grafos não direcionados um vértice é vizinho do outro.
+
+![GrafosDirecionadoNaoDirecionados](./Img/GrafosDirecionadoENao.png)
+
