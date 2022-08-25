@@ -22,9 +22,8 @@
 ![Grafos](./Img/Grafos.png)
 ![GrafosFigjam](./Img/GrafosFigjam2.png)
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Implementando Grafos em JavaScript
+#### Implementando Grafos em JavaScript
 - Implementação do Grafo abaixo em JavaScript.
 - Para fazer a implementações dos grafos usamos as tabelas hash.
 
@@ -47,7 +46,7 @@ grafos.jonny = [];
 ```
 
 
-### Grafos Direcionados e Não direcionados
+##### Grafos Direcionados e Não direcionados
 - Grafos direcionados são grafos que possuem somente um direção, somente um vizinho.
 - Grafos não direcionados um vértice é vizinho do outro.
 
