@@ -8,7 +8,3 @@
 1. Encontre o Vértice mais 'barato', este é o vértice que você consegue chegar no menor tempo possível.
 2. Atualize o custo do vizinho deste vértice.
 3. Repita até fazer para todos os vértices.
-
-
-- Vertice Mais 'barato'.
-![VerticeMaisBarato](D:\Pastas Pessoais\DEV\Estrutura_de_Dados_e_Algoritmos\ALGORITMOS\Dijkstra\IMG/Vertice mais barato.png)
