@@ -8,3 +8,5 @@
 1. Encontre o Vértice mais 'barato', este é o vértice que você consegue chegar no menor tempo possível.
 2. Atualize o custo do vizinho deste vértice.
 3. Repita até fazer para todos os vértices.
+
+> O arquivo JavaScript que está nesta pasta possui a implantação do Dijkstra.
