@@ -12,3 +12,6 @@
 - No máximo demoraríamos 18 tentivas até achar o item desejado.
 
 ![BinarySearch](./img/pb2.png)
+
+
+> Nesta pasta temos o arquivo que faz a implementação deste algoritmo.
