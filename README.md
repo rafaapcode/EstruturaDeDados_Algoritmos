@@ -7,3 +7,6 @@
 
 ## Pasta - Algoritmos
 - Esta pasta também é dividida em outras pastas que contém as imagens e exemplos de código sobre o Algoritmo correspondente.
+
+
+> Cada pasta possui um arquivo Markdown com um **RESUMO** sobre o algoritmo correspondente.
