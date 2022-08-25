@@ -9,3 +9,4 @@
 - vamos fazendo até que o nosso array chegue em 1 elemento apenas. Então fazemos a junção de tudo e pronto ordenamos nossa lista.
 - Para melhorar o desempenho do nosso algoritmo é sempre bom escolher o pivô como um elemento do meio do array.
 
+![figjam](./img/Figjam.png)
