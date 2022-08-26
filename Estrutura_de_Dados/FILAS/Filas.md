@@ -9,4 +9,8 @@
     - ***peek →*** Retorna o primeiro elemento da fila.
     - ***isEmpty →*** Verifica se a fila esta ou não vazia.
     - ***size →*** Retorna a quantidade de elementos na fila.
- ![Enqueue](./)
+    
+  
+ ![Enqueue](./imgs/Enqueue.png)
+
+![Dequeue](./imgs/dEnqueue.png)
