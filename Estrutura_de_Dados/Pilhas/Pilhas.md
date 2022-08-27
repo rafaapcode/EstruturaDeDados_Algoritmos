@@ -10,4 +10,15 @@
     - ***Clear →*** Remove todos os elementos da pilha.
     - ***Size →*** Devolve o número de elementos contidos na pilha.
 
+
+- Usando o Push :
+
+![pilhasPush](./Imagens/Pilhas.png)
+
+
+- Usando o Pop :
+
+![pilhasPush](./Imagens/Pilhas-pop.png)
+
+
 > Nesta pasta temos a implementação da estrutura de dados Pilhas.
