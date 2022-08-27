@@ -14,3 +14,10 @@
 - Exemplo :
   - - A função hash recebeu o valor 'maçã', então retornou um número 3. No índice 3 do nosso array, irá ser guardado o valor que representa a 'maçã', pode ser um número, ou qualquer outra coisa.
 
+![HashExemplo](./IMG/HASH.png)
+
+![hash1](./IMG/hash1.png)
+
+![hash2](./IMG/hash2.png)
+
+![hashTable](./IMG/Hashtable.png)
