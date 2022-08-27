@@ -10,3 +10,5 @@
 - Pilha de chamada com Recursão :
 
 ![Pilha](./img/RecursãoPilhadeChamada.png)
+
+![Pilha](./img/RecursãoPilhadeChamada2.png)
