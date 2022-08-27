@@ -12,3 +12,6 @@
 ![Pilha](./img/RecursãoPilhadeChamada.png)
 
 ![Pilha](./img/RecursãoPilhadeChamada2.png)
+
+
+> Nesta pasta temos 2 exemplos de recursão no arquivo JS
