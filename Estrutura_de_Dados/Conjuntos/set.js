@@ -71,7 +71,6 @@ class Conjunto {
 
       return intersectionSet;
     };
-
   };
 
   difference(otherset) {
@@ -97,11 +96,11 @@ class Conjunto {
     let isSubset = true;
 
     this.values().every(val => {
-      if(!otherSet.has(val)) {
+      if (!otherSet.has(val)) {
         isSubset = false;
         return false;
       };
-      
+
       return true;
     });
 
