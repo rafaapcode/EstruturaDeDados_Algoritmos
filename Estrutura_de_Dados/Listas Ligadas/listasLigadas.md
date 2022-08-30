@@ -99,11 +99,39 @@ else {
     }
    ~~~
 
+#### Removendo Elementos de uma Posição Específica
+- Verificamos se o índice passado existe dentro da nossa lista.
+  ~~~javascript
+    if(index >= 0 && index < this.count)
+  ~~~
 
+- Removendo o primeiro elemento.
+  ~~~javascript
+    if (index >= 0 && index < this.count) {
+            let current = this.head;
+            if (index === 0) {
+                this.head = current.next;
+            }
+  ~~~
+  
+  ![remove](./img/RemovendoPrimeiroElemento.png)
 
+- Removendo qualquer elemento exceto o primeiro.
 
+  ~~~javascript
+   else {
+                let previous = getElementAt(index - 1);
+	              current = previous.next;
+                previous.next = current.next;
+            }
 
+            this.count--;
+            return current.element;
+        }
+  ~~~
 
+- Está lógica funciona tanto para remover o último elemento quanto para remover elementos do meio da lista.
 
-
+ ![removendoUltimo](./img/RemovendoqualquerElemento.png)
+ ![removendomeio](./img/Removendoelementomeiolista.png)
 
