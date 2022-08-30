@@ -4,4 +4,4 @@
 - Elas não são muito quando falamos em acessar um elemento aleatório. Como elas possuem um ponteiro para o próximo item da lista, teríamos que percorres os itens até achar o item que desejamos.
 
 ##### Exemplo de uma Lista Ligada :
-  ![listaligada](./img/ExemplificacaoListasligadas.png.png)
+  ![listaligada](./img/ExemplificacaoListasligadas.png)
