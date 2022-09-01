@@ -44,15 +44,15 @@
 
 - Inserindo elementos na primeira posição.
 
-![primeirapos](./img/PrimeiraPosicao.png)
+![primeirapos](./img_ListasDuplamenteLigadas/PrimeiraPosicao.png)
 
 - Inserindo elemento na última posição.
 
-![ultimaPos](./img/UltimaposicaoPosicao.png)
+![ultimaPos](./img_ListasDuplamenteLigadas/UltimaposicaoPosicao.png)
 
 - Inserindo no meio da lista.
 
-![meioLista](./img/MeioListaAdd.png)
+![meioLista](./img_ListasDuplamenteLigadas/MeioListaAdd.png)
 
 
 ### Removendo Elementos
@@ -91,16 +91,16 @@
 
 - Removendo primeiro elemento
 
-![removeprimeiroelemento](./img/Removendo.png)
+![removeprimeiroelemento](./img_ListasDuplamenteLigadas/Removendo.png)
 
 - Removendo da ùltima posição
 
-![removendoúltimapos](./img/ultimoelementoremove.png)
+![removendoúltimapos](./img_ListasDuplamenteLigadas/ultimoelementoremove.png)
 
 
 - Removendo elemento do meio da lista.
 
-![removendomeio](./img/RemovendoElementoMeio.png)
+![removendomeio](./img_ListasDuplamenteLigadas/RemovendoElementoMeio.png)
 
 
 
