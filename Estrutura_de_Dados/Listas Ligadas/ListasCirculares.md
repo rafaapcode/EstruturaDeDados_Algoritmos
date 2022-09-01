@@ -3,7 +3,7 @@
 - Elas herdam todos os métodos da lista ligada, porém os métodos INSERT e REMOVE, possuem algumas diferenças. 
 
 
-![listasCirculares](./img/ListasCirculares.png)
+![listasCirculares](./img_ListasCirculares/ListasCirculares.png)
 
 
 
@@ -35,11 +35,11 @@
 
 - Inserindo o elemento com lista vazia
 
-![primeiroElemento](./img/Inserindooprimeiroelemento.png)
+![primeiroElemento](./img_ListasCirculares/Inserindooprimeiroelemento.png)
 
 - Inserindo elemento com lista cheia
 
-![listaCheia](./img/InserindooprimeiroelementoListacheia.png)
+![listaCheia](./img_ListasCirculares/InserindooprimeiroelementoListacheia.png)
 
 
 ### MÉTODO REMOVE
@@ -74,7 +74,7 @@
 
 - Removendo Elemento
 
-![removendo](./img/Removendo.png)
+![removendo](./img_ListasCirculares/Removendo.png)
 
 
 
