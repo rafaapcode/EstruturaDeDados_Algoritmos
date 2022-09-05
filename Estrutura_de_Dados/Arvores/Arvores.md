@@ -41,6 +41,7 @@
 ~~~
 
 - Exemplo de uma BST(Binary Search Tree) :
+
   ![exemploArvores](./img/ExempoBST.png)
 
 - Métodos que serão implementados :
