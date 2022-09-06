@@ -123,6 +123,7 @@
 ~~~
 
 - Caminho que o método percorre :
+
   ![caminhoPercorrido](./img/MetodoInorder.png)
 
 ##### Percurso Pré-Ordem
@@ -145,6 +146,7 @@
 ~~~
 
 - Caminho que o método percorre :
+
   ![caminhoPercorrido](./img/MetodoPreorder.png)
 
 ##### Percurso Pós-Ordem
@@ -167,6 +169,7 @@
 ~~~
 
 - Caminho que o método percorre :
+
   ![caminhoPercorrido](./img/MetodoPosorder.png)
 
 ---------------------------------------------------------------------------------------------------------------
