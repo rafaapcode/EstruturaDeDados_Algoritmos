@@ -21,7 +21,7 @@
 ### Árvore Binária  e Árvore Binária de Busca
 
 - Uma árvore binária possui no máximo 2 filhos, um a esquerda e um a direita.
-- Uma árvore binária de busca ela armazena que do lado esquerdo do nó seja armazenado somente os nós com valores menores e do lado direito somente os nós com valores maiores. Desta maneira a árvores automaticamente fica ordenada. O diagrama acima representa uma Árvore Binária de Busca.
+- Uma árvore binária de busca ela armazena que do lado esquerdo do nó seja armazenado somente os nós com valores menores e do lado direito somente os nós com valores maiores.O diagrama acima representa uma Árvore Binária de Busca.
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -103,4 +103,174 @@
 
 - Percorrer uma árvore é simplesmente passar por todos os nós dela e executar executar uma operação em cada um dos nós.
 
-##### Percorrer em ordem
+##### Percurso em ordem
+
+- Visita todos os nós da nossa árvores em ordem crescente. Podemos utilizá-lo para fazer a ordenação de uma árvore.
+
+~~~javascript
+  inOrderTraverse(callback){
+    this.inOrderTraverseNode(this.root, callback);
+  };
+
+
+  inOrderTraverseNode(node, callback){
+    if(node !== null){
+      this.inOrderTraverseNode(node.left, callback);
+      callback(node.key);
+      this.inOrderTraverseNode(node.right, callback);
+    };
+  };
+~~~
+
+- Caminho que o método percorre :
+  ![caminhoPercorrido](./img/MetodoInorder.png)
+
+##### Percurso Pré-Ordem
+
+- Visita o nó antes de visitar o seus descendentes.
+- Percorre primeiro o nó raiz, depois o nó a esquerda e por  último o nó a direita.
+
+~~~javascript
+  preOrderTraverse(callback) {
+    this.preOrderTraverseNode(this.root, callback);
+  };
+
+  preOrderTraverseNode(node, callback){
+    if (node !== null) {
+      callback(node.key);
+      this.inOrderTraverseNode(node.left, callback);
+      this.inOrderTraverseNode(node.right, callback);
+    };
+  };
+~~~
+
+- Caminho que o método percorre :
+  ![caminhoPercorrido](./img/MetodoPreorder.png)
+
+##### Percurso Pós-Ordem
+
+- Visita um nó somente depois de visitar os seus descendentes.
+- Primeiro percorrerá o nó a esquerda, depois o nó a direita e por último o nó raiz.
+
+~~~javascript
+  postOrderTraverse(callback) {
+    this.postOrderTraverseNode(this.root, callback);
+  };
+
+  postOrderTraverseNode(node, callback) {
+    if (node !== null) {
+      this.inOrderTraverseNode(node.left, callback);
+      this.inOrderTraverseNode(node.right, callback);
+      callback(node.key);
+    };
+  };
+~~~
+
+- Caminho que o método percorre :
+  ![caminhoPercorrido](./img/MetodoPosorder.png)
+
+---------------------------------------------------------------------------------------------------------------
+
+#### Pesquisa de Valores
+
+- Valores mínimos e máximos:
+  - Podemos perceber que sempre o nó mínimo da nossa árvores estará a esquerda no último nível. E o nó máximo a direita no último nível.
+  
+  ![caminhoPercorrido](./img/ExMinMAx.png)
+
+~~~javascript
+  min() {
+    return this.minNode(this.root);
+  };
+
+  minNode(node) {
+    let current = node;
+    while (current != null && current.left != null) { 
+      current = current.left; 
+    };
+    return current; 
+  };
+
+  max() {
+    return this.maxNode(this.root); 
+  };
+
+  maxNode(node) {
+    let current = node;
+    while (current != null && current.right != null) { 
+      current = current.right; 
+    };
+    return current; 
+  };
+~~~
+
+--------------------------------------------------------------------------------------------------------------
+
+#### Valor Específico
+
+~~~javascript
+  search(key) {
+    return this.searchNode(this.root, key);
+  };
+
+  searchNode(node, key) {
+    if (node == null) {
+      return false;
+    };
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+
+      return this.searchNode(node.left, key);
+
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+
+      return this.searchNode(node.right, key);
+    
+    } else {
+      return true;
+    };
+  };
+~~~
+
+--------------------------------------------------------------------------------------------------------------
+
+#### Removendo um Nó
+
+~~~javascript
+  remove(key) {
+    this.root = this.removeNode(this.root, key);
+  };
+
+  removeNode(node, key) {
+    if (node == null) {
+      return null;
+    };
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      node.left = this.removeNode(node.left, key);
+      return node;
+    } else if ( this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      node.right = this.removeNode(node.right, key);
+      return node;
+    } else {
+
+      if (node.left == null && node.right == null) {
+        node = null;
+        return node;
+      };
+
+      if (node.left == null) {
+        node = node.right;
+        return node;
+      } else if (node.right == null) {
+        node = node.left;
+        return node;
+      };
+
+      const aux = this.minNode(node.right);
+      node.key = aux.key;
+      node.right = this.removeNode(node.right, aux.key);
+      return node;
+    };
+  };
+~~~
+
+- Na implementação acima estaremos encontrando a chave que estamos procurando, a partir disso teremos 3 cenários para tratar :
