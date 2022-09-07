@@ -277,3 +277,151 @@
 ~~~
 
 - Na implementação acima estaremos encontrando a chave que estamos procurando, a partir disso teremos 3 cenários para tratar :
+  1. Nó folha. Tudo que temos que fazer é atribuir o valor para este nó.
+
+    ![nofolha](./img/NoFolha.png)
+
+  2. Nó possui um filho a esquerda ou direita. Neste cenário podemos pular esse nó e fazer o pai apontar diretamente para o filho.
+
+    ![nofilhos](./img/NoFilho.png)
+  
+  3. Removendo um nó com dois filhos. Para remover este iremos achar o nó mínimo da sua subárvore à direita e então substituir. Neste queremos remover o 15, então vamos para a subárvore dele à direita e achamos o menor nó, que no caso é o 18, então simplesmente substituimos o 15 por 18.
+
+    ![noDoisFilhos](./img/NoDoisFilhos.png)
+  
+--------------------------------------------------------------------------------------------------------------
+
+#### Árvores autobalanceadas
+
+- As árvores BST possuem um problema, conforme ocorre as adições de elementos, um dos lados poderá ter uma profundidade maior que do outro lado :
+
+  ![desbalanceada](./img/ArvoreDesbalanceada.png)
+- Este tipo de árvore pode causar problemas no desempenho total da árvore. Por conta deste problema existem as árvores AVL que são arvores BST autobalanceadas.
+
+##### Árvores AVL
+
+- Tenta se autobalancear sempre que um nó é adicionado ou removido.
+- Criando a nossa class AVL :
+
+    ~~~javascript
+      class AvlTree extends BinarySearchTree {
+        constructor(compareFn = defaultCompare) {
+          this.compareFn = compareFn;
+          this.root = null;
+        };
+      };
+    ~~~
+
+  - Os métodos insert e remove da árvore AVL, são semelhantes ao da BST, a única diferença é que iremos verificar o fator de balanceamento da árvore e aplicar a lógica adequada.
+  - Altura de um NÓ :
+    - É a quantidade máxima de arestas que temos do nó até qualquer uma de suas folhas.
+
+    ![alturano](./img/alturaNo.png)
+  
+  - Calculando a altura de um nó :
+
+    ~~~javascript
+      getNodeHeight(node) {
+          if (node == null) {
+            return -1;
+          };
+          return Math.max(this.getNodeHeight(node.left), this.getNodeHeight(node.right)) + 1;
+      };
+    ~~~
+
+- Calculando o fator de balanceamento :
+  - Sempre que um nó for adicionado ou removido, deveremos calcular a diferença entre a subárvore do lado direito e também a do lado esquerdo, esse cálculo deverá ser 0, 1 ou -1, se der qualquer valor diferente disso significa que a árvore deve ser balanceada.
+
+  ![fatorBalanceamento](./img/FatorBalanceamento.png)
+
+- Para calcular o fator de balanceamento , iremos primeiro criar uma constante, para guardar os status do balanceamento da nossa árvores :
+
+    ~~~javascript
+      const BalanceFactor = {
+      UNBALANCED_RIGHT: 1,
+      SLIGHTLY_UNBALANCED_RIGHT: 2,
+      BALANCED: 3,
+      SLIGHTLY_UNBALANCED_LEFT: 4,
+      UNBALANCED_LEFT: 5
+    };
+    ~~~
+
+- Calculando o fato de balanceamento :
+
+    ~~~java
+    getBalanceFactor(node) {
+        const heightDifference = this.getNodeHeight(node.left) -
+          this.getNodeHeight(node.right);
+        switch (heightDifference) {
+          case -2:
+            return BalanceFactor.UNBALANCED_RIGHT;
+          case -1:
+            return BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT;
+          case 1:
+            return BalanceFactor.SLIGHTLY_UNBALANCED_LEFT;
+          case 2:
+            return BalanceFactor.UNBALANCED_LEFT;
+          default:
+            return BalanceFactor.BALANCED;
+        };
+      };
+    ~~~
+
+- Depois de verificarmos se a árvore precisa ou não ser balanceada, temos 2 processos de balanceamento que podemos usar :
+  - Rotação Simples ou  a Rotação dupla :
+    - ***LL:*** é uma rotação simples à direita;
+    - ***RR:*** é uma rotação simples à esquerda;
+    - ***LR :*** é uma rotação dupla à direita;
+    - ***RL:*** é uma rotação dupla à esquerda;
+
+  - ***Rotação LL →*** Quando a altura de um filho a esquerda é maior que de um filho a direita.
+
+  ![ll](./img/RotacaoLL.png)
+
+  ~~~javascript
+    rotationLL(node) {
+    const tmp = node.left;
+    node.left = tmp.right; 
+    tmp.right = node; 
+    return tmp;
+  };
+  ~~~
+
+  - ***Rotação RR →*** → o inverso da rotação LL. Quando a altura de um filho a direita é maior que a do filho á esquerda.
+
+  ![rr](./img/RotacaoRR.png)
+
+  ~~~javascript
+    const tmp ={ node.right; // {1}
+  node.right = tmp.left; // {2}
+  tmp.left = node; // {3}
+  return tmp;
+  };
+  ~~~
+
+  - ***Rotação LR →*** Quando a altura de um filho a esquerda é maior que de um filho a direita, e  o filho a esquerda é mais pesado a direita.
+    - Basicamente fazemos uma Rotação LL e depois uma Rotação RR.
+  
+  ![lr](./img/RotacaoLR.png)
+
+  ~~~javascript
+  rotationLR(node) {
+    node.left = this.rotationRR(node.left);
+    return this.rotationLL(node);
+  };
+  ~~~
+
+  - ***Rotação RL →***  Quando a altura de um filho a direita é  maior que de um filho a esquerda, e  o filho a  direita é mais pesado a esquerda.
+
+  ![rl](./img/RotacaoRL.png)
+
+  ~~~javascript
+    rotationRL(node) {
+    node.right = this.rotationLL(node.right);
+    return this.rotationRR(node);
+  };
+  ~~~
+
+-------------------------------------------------------------------------------------------------------------
+
+#### Inseindo Nó em uma Árovre AVL
