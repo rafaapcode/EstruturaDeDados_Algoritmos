@@ -424,7 +424,7 @@
 
 -------------------------------------------------------------------------------------------------------------
 
-#### Inseindo Nó em uma Árovre AVL
+#### Inseindo Nó em uma Árvore AVL
 
 - Após a inserção do nó verificaremos se a árvores continua balanceada, senão aplicaremos os métodos de rotação necessário.
 - Método de inserção :
@@ -510,3 +510,5 @@
     return node;
   };
   ~~~
+
+> As implementações dessa Estrutura de Dados, pode ser encontrada no Arquivo bst.js localizado nessa pasta.
