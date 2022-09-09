@@ -162,3 +162,5 @@
 - O diagrama a seguir mostra a aplicação do nosso método :
 
 ![siftDown](./img/siftDown.png)
+
+> O arquivo minHeap.js possui a implementação da nossa classe MinHeap.
