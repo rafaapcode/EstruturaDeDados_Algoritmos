@@ -1,3 +1,5 @@
+## Heap Sort
+
 - É um algoritmos de ordenação.
 - Composto de 3 passos :
     1. Primeiros iremos criar um heapMáximo com o array que desejamos ordenar.
