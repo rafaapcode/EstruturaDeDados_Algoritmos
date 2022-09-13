@@ -1,6 +1,6 @@
 import { defaultCompare, Compare } from "./auxFn";
 
-export class MinHeap {
+export default class MinHeap {
   constructor(compareFn = defaultCompare) {
     this.compareFn = compareFn;
     this.heap = [];
